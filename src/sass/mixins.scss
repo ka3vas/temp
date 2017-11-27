@@ -1,0 +1,25 @@
+@import 'variables';
+
+@mixin margin-auto {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+@mixin border($top: 0, $right: 0, $bottom: 0, $left: 0, $color: black) {
+    @if $top != 0 {
+        border-top: $top solid $color;
+    } 
+    
+    @if $right != 0 {
+        border-right: $right solid $color;
+    } 
+    @if $bottom != 0 {
+        border-bottom: $bottom solid $color;
+    } 
+
+    @if $left != 0 {
+        border-left: $left solid $color;
+    }
+}

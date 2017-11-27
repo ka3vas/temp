@@ -1,0 +1,33 @@
+@import 'variables';
+@import 'mixins';
+
+html { font-size: $baseFontSize; }
+h2 { font-size: 3rem; }
+p { font-size: 1.6rem; }
+
+.product {
+    margin-top: 30px;
+    @include margin-auto;
+    width: 960px;
+    padding: 2rem 2rem 5rem 2rem;
+    
+}
+
+.product-image {
+    margin: 0 3rem 0 0;
+    // top, right, bottom, left, color - all have default value
+    @include border(1px,1px,1px,1px);
+    box-shadow: 2px -2px 10px;
+    max-height: 200px;
+    transition: all 0.5s;
+    &:hover {
+        max-height: 300px;
+    }
+    
+    &_large {
+        max-height: 300px;
+    }
+    &_small {
+        max-height: 150px;
+    }
+}
